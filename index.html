@@ -3,22 +3,45 @@
 
   <head>
     <title>Caelan's WebOS</title>
-    <style>
 
-    </style>
+    <style></style>
+    
   </head>
 
-  <script>
+  <body style="background-color: rgb(203, 203, 203); 
+    font-family: Helvetica, Noto Sans, sans-serif">
 
-  </script>
+    <!-- Time -->
+    <script>
+      function updateTime() {
+        var currentTime = new Date().toLocaleString();
+        var timeText = document.querySelector("#timeElement");
+        timeText.innerHTML = currentTime;
+      }
+      setInterval(updateTime, 1000);
+    </script>
 
-  <body style="background-color: rgb(203, 203, 203); font-family: Helvetica, Noto Sans, sans-serif">
+    <!-- Center -->
     <div style="border: thick double #ffffff; width: 192px; border-radius: 16px; padding: 16px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%)">
-      <h1 style="margin: 4px; color: #fff">Greetings!</h1>
-      <p style="color: #5cb7a6;">Welcome to my GitHub Pages site!</p>
-      <img style="object-fit: cover; width: 128px; height: 128px; object-fit: cover" src="picture/crow.one.png">
+      <h1 
+        style="margin: 4px; 
+        color: #fff">
+        Greetings!
+      </h1>
+
+      <p 
+        style="color: #5cb7a6;">
+        Welcome to my GitHub Pages site!
+      </p>
+
+      <img 
+        style="object-fit: cover; 
+        width: 128px; height: 128px; object-fit: cover" 
+        src="picture/crow.one.png">
+
     </div>
 
+    <!-- Top -->
     <div style="display: flex; position: absolute; width: 100%; display: flex; justify-content: space-around; backdrop-filter: blur(10px); background-color: rgb(0, 75, 46); color: #fff;">
       <p style="margin-left: 16px;">
         CealanOS
@@ -28,18 +51,24 @@
       </p>
     </div>
 
-  <div>
-    <p>Hello, I'm Cealan(or Ludwig, it's all my fake name anyway)</p>
-    <img src="picture/Sea, People.jpg">
-  </div>
+    <div>
+      <p>Hello, I'm Cealan(or Ludwig, it's all my fake name anyway)</p>
+      <img src="picture/Sea, People.jpg">
+    </div>
 
-  <div>
-    <p>did you know...</p>
-    <!-- put something random and strange -->
+    <div>
+      <p>did you know...</p>
+      <!-- put something random and strange -->
 
-    <p>you are lost</p>
-    <!-- put it when viewer pass one hour in here -->
-  </div>
+      <p>you are lost</p>
+      <!-- put it when viewer pass one hour in here -->
+
+      <p id="timeElement"
+      style="margin-right: 16px;">
+      Time
+      </p>
+    </div>
+
 
   </body>
 
